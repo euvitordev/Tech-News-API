@@ -5,7 +5,7 @@ const news = require("./src/data/news.json")
 
 server.use(cors())
 
-server.get("/news", (req, res) => {
+server.get("/", (req, res) => {
   return res.json(news)
 })
 
