@@ -1,12 +1,11 @@
 const express = require("express")
 const server = express()
+const news = require("./src/data/news.json")
 
-server.get("/", (req, res) => {
-  return res.json({
-    mensagem: "API Funcionando...",
-  })
+server.get("/news", (req, res) => {
+  return res.json(news)
 })
 
 server.listen(3000, () => {
-  console.log("Funcionando")
+  console.log("API Funcionando")
 })
